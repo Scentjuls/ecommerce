@@ -1,21 +1,140 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
+<div class="landing-page">
+    <section class="site-navbar">
+      <div class="nav-one py-4">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-6 col-md-4 order-2 order-md-1 float-left">
+              <form class="d-flex">
+                <i class="fas fa-search mr-2 mt-2"></i>
+                <input type="text" placeholder="search..." class="search">
+              </form>
+            </div>
+            <div class="col-12 col-md-4 order-1 order-md-2 text-center">
+              <div class="app-name">
+                <a routerLink="/" class="app-name-text text-center text-uppercase px-4 py-2">anti glare</a>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 order-3 order-md-3">
+              <div class="d-flex my-2 float-right">
+                <div class="dropdown">
+                  <a class="contact-dropdown" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i  class="fas fa-user mr-2"></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" *ngIf="!authService.isLoggedIn()" routerLink="/auth/login">Log In</a>
+                    <a class="dropdown-item" *ngIf="!authService.isLoggedIn()" routerLink="/auth/signup">Register</a>
+                    <a class="dropdown-item" *ngIf="authService.isLoggedIn()"  (click)="authService.logoutUser()" routerLink="/">Log Out</a>
+                  </div>
+                </div>
+                <i class="far fa-heart mr-2"></i>
+                <i  routerLink="/cart" class="fab fa-opencart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/landing-page">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/landing-page">Shop <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">catalogue <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">new arrivals <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">contact <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+ 
+  <router-outlet></router-outlet>
+  
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="footer-text">Navigations</p>
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-12">
+              <p class="footer-navigation">sell online</p>
+              <p class="footer-navigation">features</p>
+              <p class="footer-navigation">shopping cart</p>
+              <p class="footer-navigation">store builder</p>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12">
+              <p class="footer-navigation">mobile commerce</p>
+              <p class="footer-navigation">drop shipping</p>
+              <p class="footer-navigation">website development</p>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12">
+              <p class="footer-navigation">point of sale</p>
+              <p class="footer-navigation">hardware</p>
+              <p class="footer-navigation">software</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+              <p class="footer-text">Promo</p>
+              <figure>
+                <img src="assets/hero_1.jpg" alt="" class="footer-promo-img w-100 mb-4">
+                <figcaption>
+                  <p class="promo-details m-0">Finding your perfect pair</p>
+                  <p class="promo-dates">Promo from January 16 - 25, 2020</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 contact">
+              <p class="footer-text">Contact Info</p>
+              <div class="mb-3">
+                <i class="fas fa-map-marker-alt mr-3"></i>
+                <span class="contact-info-text">14a Karimu Kotun Vi</span>
+              </div>
+              <div class="mb-3">
+                <i class="fas fa-phone mr-3"></i>
+                  <a href="tel://2349059620107" class="phone contact-info-text"> +2349059620107</a>
+              </div>
+              <div class="mb-3">
+                <i class="fas fa-envelope mr-3"></i>
+                <span class="emailcontact-info-text">vanityclosetbyjuls@gmail.com</span>
+              </div>
+              <div class="subscribe mt-5">
+                <form action="">
+                  <div class="form-group">
+                    <label for="email" class="email-label">Subscribe</label>
+                    <input type="email" id="email" class="form-control email" placeholder="Email">
+                    <button type="submit" class="btn btn-send-email">Send</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  

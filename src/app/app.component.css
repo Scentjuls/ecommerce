@@ -1,0 +1,113 @@
+.landing-page {
+    font-size: 15px;
+  }
+  
+  .nav-one {
+    border-bottom: 1px solid #f3f3f4;
+  }
+  
+  .fa-search {
+    font-size: 11px;
+  }
+  
+  .search,
+  .focus-visible {
+    border: none !important;
+  }
+  
+  .app-name-text {
+    border: 1px solid black;
+    font-weight: 300;
+    color: black;
+  }
+  
+  .nav-link {
+    font-size: 15px;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  
+  .contact-dropdown {
+    cursor: pointer;
+  }
+  
+  .navbar-nav .active>.nav-link,
+  .navbar-nav .nav-link:hover,
+  .footer-navigation:hover,
+  .phone:hover {
+    color: #96A5F7 !important;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .footer {
+    border-top: 1px solid #f3f3f4;
+  }
+  
+  
+  .footer-text {
+    color: #25262A;
+    font-size: 20px;
+  }
+  
+  .footer-navigation {
+    color: #8C92A0;
+    text-transform: capitalize;
+  }
+  
+  .contact-info-text {
+    color: #25262A !important;
+  }
+  
+  .contact i {
+    color: #7971EA;
+  }
+  
+  .promo-dates {
+    color: #8C92A0;
+  }
+  
+  .promo-details{
+    color: #7971EA;
+    font-size: 18px;
+  }
+  
+  .form-group {
+    position: relative;
+  }
+  
+  .email {
+    height: 44px;
+  }
+  
+  .form-control:focus,
+  .form-control:active {
+    border: 1px solid #7971EA !important;
+    box-shadow: none;
+  }
+  
+  .email-label {
+    font-size: 20px;
+  }
+  
+  .btn-send-email {
+    position: absolute;
+    top: 42px;
+    right: 4px;
+    color: white;
+    background-color: #7971EA;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .btn-send-email:hover {
+    background-color: #5355E3;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+    transform: translateY(-2px);
+    transition: all .3s;
+  }
+
+  .fab,
+  .far {
+    cursor: pointer;
+  }

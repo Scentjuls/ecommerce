@@ -1,0 +1,100 @@
+<div class="breadcrumb-container mb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb px-0 m-0 py-4">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Register</li>
+          </ol>
+        </nav> 
+      </div>
+    </div>
+  </div>
+</div>
+<div class="signup pb-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-sm-12">
+        <div class="row signup__card mt-5 position-relative">
+          <div class="col-lg-12 semi_circle"></div>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-4 offset-lg-4 col-sm-12">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <p class="sign_up ff mt-5">Sign Up </p>
+                  </div>
+                </div>
+                <form ngNativeValidate #signupForm="ngForm" (submit)=signUp(signupForm)>
+                  <div class="form-group">
+                    <label for="firstname" class="ff fs-12 firstname">Firstname</label>
+                    <input type="text" class="form-control ff fs-12" #firstName="ngModel" name="firstname" ngModel
+                      id="firstname" minlength="3" maxlength="10" aria-describedby="firstnameHelp"
+                      placeholder="Enter firstname" required>
+                    <!-- <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+                      <div *ngIf="firstName.errors.required"> First Name is required </div>
+                      <div *ngIf="firstName.errors.minlength">First Name should be minimum
+                        {{firstName.errors.minlength.requiredLength}} characters</div>
+                    </div> -->
+                  </div>
+                  <div class="form-group">
+                    <label for="lastname" class="ff fs-12 lastname">Lastname</label>
+                    <input type="text" class="form-control ff fs-12" name="lastname" ngModel id="lastname"
+                      aria-describedby="lastnameHelp" placeholder="Enter lastname" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="username" class="ff fs-12 username">Username</label>
+                    <input type="text" class="form-control ff fs-12" name="username" ngModel id="username"
+                      aria-describedby="usernameHelp" placeholder="Enter username" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="ff fs-12 email">Email Address</label>
+                    <input type="email" class="form-control ff fs-12" name="email" ngModel id="email"
+                      aria-describedby="emailHelp" placeholder="Enter email" required>
+
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="ff fs-12 password">Password</label>
+                    <input type="password" class="form-control ff fs-12" name="password" ngModel id="password"
+                      aria-describedby="passwordHelp" placeholder="Enter password" required>
+                  </div>
+                  <!-- <div class="form-group">
+                    <label for="confirmPassword" class="ff fs-12 confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control ff fs-12" name="confirmPassword" ngModel
+                      id="confirmPassword" aria-describedby="confirmPasswordHelp" placeholder="Enter confirmPassword"
+                      required>
+                  </div>
+                  <div class="formgroup">
+                    <label for="contactMethod" class="ff fs-12">Contact Method</label>
+                    <select name="contactMethod" ngModel id="contactMethod" class="form-control" required>
+                      <option value=""></option>
+                      <option *ngFor="let method of contactMethods" [value]="method.name"> {{method.name}} </option>
+                    </select>
+                  </div>
+                  <div class="formgroup">
+                    <div class="radio" *ngFor="let method of contactMethods">
+                      <label for="contactRadio"  class="ff fs-12">
+                        <input type="radio" ngModel id="contactRadio" name="contactRadio" [value]="method.id" class="ff fs-12">
+                        {{method.name}}
+                      </label>
+                    </div>
+                  </div>
+                  <div class="formgroup">
+                    <div class="checkbox">
+                      <label for="isSubscribed"  class="ff fs-12">
+                        <input type="checkbox" ngModel name="isSubscribed" id="isSubscribed"> Subscribe to mailing list
+                      </label>
+                    </div>
+                  </div> -->
+                  <button type="submit" class="btn save-btn px-3 my-3" [disabled]="!signupForm.valid">Create
+                    Account</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

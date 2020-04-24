@@ -1,0 +1,166 @@
+/* SHARED CSS */
+
+.shopping-explanation {
+  color: #8C92A0;
+}
+
+.section-text {
+  font-size: 32px;
+  color: #25262A;
+}
+
+.product-container {
+  position: relative;
+}
+
+.product-container::before {
+  content: '';
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #7971ea;
+  left: 42%;
+  bottom: 120%;
+}
+
+.shopping-details {
+  border-bottom: 1px solid #f3f3f4;
+}
+
+.background-image-row {
+  height: 86vh;
+}
+
+.background-image {
+  background-image: url("../../assets/hero_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.background-image-heading {
+  font-weight: 900;
+}
+
+.background-image-text {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  font-weight: lighter;
+}
+
+
+.hero-text>h2 {
+  font-size: 50px;
+}
+
+.btn-shop-now {
+  color: white;
+  background-color: #7971EA;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-shop-now:hover {
+  background-color: #5355E3;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+  transform: translateY(-2px);
+  transition: all .3s;
+}
+
+
+
+.media i {
+  color: #7971EA;
+}
+
+.media-body h5 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #25262A;
+}
+
+
+.category-container::before {
+  z-index: 1;
+  background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* .category-container {
+  height: 350px;
+} */
+
+/* .category {
+  transform: translateY(-10px) scale(1);
+} */
+
+/* .category:hover {
+  cursor: pointer;
+  transform: translateY(-10px) scale(0.7);
+} */
+
+.figcaption {
+  position: relative;
+  color: #ffffff;
+}
+
+.collection-text {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.collection-name {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  font-size: 40px;
+}
+
+.featured-products {
+  background-color: #F8F9FA;
+}
+
+.sales-heading {
+  font-size: 32px;
+  color: #7971EA;
+}
+
+
+/* ========== MEDIA QUERIES ========= */
+
+@media only screen and (max-width:425px) {
+  .hero-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text>h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .media-container-support {
+    border-right: none;
+  }
+
+  .carousel-caption {
+    top: 14%;
+    left: 10%;
+  }
+
+  .advancing {
+    width: 543px;
+  }
+}

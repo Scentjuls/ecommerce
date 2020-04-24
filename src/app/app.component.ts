@@ -1,10 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './services/auth.service';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'imagesApp';
-}
+export class AppComponent implements OnInit {
+  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //Add 'implements OnInit' to the class.
+
+  constructor(
+    private authService: AuthService
+  ){}
+  
+
+  ngOnInit() {
+    AOS.init();
+  }
+
+} 

@@ -1,1 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+
+.ff {
+  font-family: 'Oswald', sans-serif;
+}
+.fs-6 {
+  font-size: 0.375em;
+}
+.fs-7 {
+  font-size: 0.438em;
+}
+
+.fs-10 {
+  font-size: 0.543em;  
+}
+.fs-11 {
+  font-size: 0.688em;
+}
+
+.fs-12 {
+  font-size: 0.750em;
+}
+.fs-13{
+  font-size: 0.800em;
+}
+.fs-14 {
+  font-size: 0.875em;
+}
+
+.fs-15 {
+  font-size: 0.938em;
+}
+.fs-16{
+  font-size: 1.000em;
+}
+.fs-17 {
+  font-weight: 1.106em;
+}
+
+.fs-18 {
+  font-size: 1.125em;
+}
+
+.fs-20 {
+  font-size: 1.250em;
+}
+
+.fs-21 {
+  font-size: 1.313em;
+}
+
+.fs-24 {
+  font-size: 1.500em;
+}
+
+.fs-26 {
+  font-size: 1.625em;
+}
+
+.fs-27 {
+  font-size: 1.688em;
+}
+
+.fs-31 {
+  font-size: 1.938em;
+}
+
+.fs-32 {
+  font-size: 2.000em;
+}
+
+.fs-36 {
+  font-size: 2.250em;
+}
+
+.fs-42 {
+  font-size: 2.625em;
+}
+.fs-44 {
+  font-size: 2.763em;
+}
+
+.fs-88 {
+  font-size: 5.200em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.fw-600 {
+font-weight: 600;
+}
+
+.fw-800 {
+  font-weight: 800;
+}

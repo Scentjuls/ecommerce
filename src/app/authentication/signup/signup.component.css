@@ -1,0 +1,55 @@
+.breadcrumb-container {
+    background-color: #F8F9FA;
+}
+
+.breadcrumb {
+    background-color: transparent;
+}
+
+.breadcrumb-item a{
+    color: #7971EA;
+}
+
+.breadcrumb-item.active {
+    color: #25262A;
+}
+
+.signup {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f3f3f4;
+}
+
+.signup__card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    overflow: hidden;
+ 
+}
+
+.semi_circle {
+    clip-path: circle(60% at 0% 50%);
+    background-color: #F4F6FD;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+}
+
+.save-btn {
+    background-color: blue;
+    color: white;
+}
+
+.form-control.ng-invalid.ng-touched {
+    border: 2px solid red;
+    box-shadow: none;
+}
+
+.form-control:focus,
+.form-control:active {
+  border: 1px solid #7971EA !important;
+  box-shadow: none;
+}

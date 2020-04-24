@@ -1,0 +1,42 @@
+<div class="breadcrumb-container mb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb px-0 m-0 py-4">
+              <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{ exactProduct.name }}</li>
+            </ol>
+          </nav> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-view py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-12">
+          <img src="{{exactProduct.photo}}" alt="product-photo" class="product-image w-100">
+        </div>
+        <div class="col-lg-6 col-md-6 col-12 px-lg-5">
+          <h1 class="product-name text-black"> {{ exactProduct.name }}</h1>
+          <p class="full-description">{{exactProduct.description}}</p>
+          <p class="amount"> ${{exactProduct.amount}}</p>
+         <form ngNativeValidate #updateCartForm="ngForm" (submit)=updateCart(updateCartForm)>
+           <div  class="form-group inline-block">
+            <div *ngFor="let size of sizes">
+              <input type="radio" id="size" name="size" ngModel [value]="size.actualSize" required>
+              <label for="small" class="sizeRadioInput mr-2">{{size.name}}</label>
+            </div>
+           </div>
+          <div class="counter">
+            <span (click)="decrement()" class="decrement">-</span>
+            <input type="text" value="{{quantity}}" class="input-value text-center" id="quantity" name="quantity" >
+            <span (click)="increment()" class="increment">+</span>
+          </div>
+          <button type="submit" class="btn btn-add-to-cart text-uppercase px-4 py-2 mt-5">Add to cart</button>
+         </form>
+        </div>
+      </div>
+    </div>
+  </div>
